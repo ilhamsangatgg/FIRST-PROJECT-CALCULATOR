@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="id">
-<link rel="manifest" href="./manifest.json">
-<meta name="theme-color" content="#080b16">
-<meta name="apple-mobile-web-app-capable" content="yes">
-  <head>
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="theme-color" content="#080b16">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
   <title>Calculator</title>
+
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="./manifest.json">
 </head>
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("./service-worker.js")
-        .then(() => console.log("Service Worker registered!"))
-        .catch((error) => console.error("Service Worker error:", error));
-    });
-  }
-</script>
-  <body>
+
+<body>
+
   <main class="app">
+
     <header class="topbar">
       <div class="brand">
         <div class="brand-icon">＋<span>−</span><br>×<span>÷</span></div>
@@ -70,11 +67,26 @@
         <h2>◷ <span>History</span></h2>
         <button id="clear-history">Clear all</button>
       </div>
-      <ul id="history-list"><li class="empty">Belum ada riwayat.</li></ul>
+      <ul id="history-list">
+        <li class="empty">Belum ada riwayat.</li>
+      </ul>
     </section>
 
     <footer>Made with HTML, CSS &amp; JavaScript</footer>
+
   </main>
+
   <script src="script.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js")
+          .then(() => console.log("Service Worker registered!"))
+          .catch((error) => console.error("Service Worker error:", error));
+      });
+    }
+  </script>
+
 </body>
 </html>
