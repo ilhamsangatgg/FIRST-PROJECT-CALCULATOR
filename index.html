@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b16">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">＋<span>−</span><br>×<span>÷</span></div>
+        <div>
+          <h1>Calculator</h1>
+          <p>Simple. Fast. Accurate.</p>
+        </div>
+      </div>
+      <button class="history-jump" id="history-jump" aria-label="Lihat riwayat">◷</button>
+    </header>
+
+    <section class="calculator" aria-label="Kalkulator">
+      <div class="display">
+        <div id="previous" class="previous"></div>
+        <div id="current" class="current" aria-live="polite">0</div>
+      </div>
+
+      <div class="buttons">
+        <button class="utility" data-action="clear">AC</button>
+        <button class="utility" data-action="delete" aria-label="Hapus satu angka">⌫</button>
+        <button class="utility" data-action="percent">%</button>
+        <button class="operator" data-operator="/">÷</button>
+
+        <button data-number="7">7</button>
+        <button data-number="8">8</button>
+        <button data-number="9">9</button>
+        <button class="operator" data-operator="*">×</button>
+
+        <button data-number="4">4</button>
+        <button data-number="5">5</button>
+        <button data-number="6">6</button>
+        <button class="operator" data-operator="-">−</button>
+
+        <button data-number="1">1</button>
+        <button data-number="2">2</button>
+        <button data-number="3">3</button>
+        <button class="operator" data-operator="+">+</button>
+
+        <button class="zero" data-number="0">0</button>
+        <button data-action="decimal">.</button>
+        <button class="equal" data-action="calculate">=</button>
+      </div>
+    </section>
+
+    <section class="history" id="history">
+      <div class="history-heading">
+        <h2>◷ <span>History</span></h2>
+        <button id="clear-history">Clear all</button>
+      </div>
+      <ul id="history-list"><li class="empty">Belum ada riwayat.</li></ul>
+    </section>
+
+    <footer>Made with HTML, CSS &amp; JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
